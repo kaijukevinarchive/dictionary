@@ -26,7 +26,7 @@ class Word
 
 	define_singleton_method(:find) do |id_number|
 		found_word = nil
-		@@words_list.each() do 	|word|
+		@@words_list.each() do |word|
 			if word.id() == id_number
 				found_word = word
 			end
