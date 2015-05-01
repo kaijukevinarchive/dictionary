@@ -1,8 +1,10 @@
 <section class="definition">
 	<h3><%= @word.word_entry() %></h3>
-	<p>Definitions:</p>
+	<h4>Definitions:</h4>
+	<ol>
 	<% @word.definition_list().each() do |definition| %>
-		<p><%= definition.definition_entry() %></p>
+		<li><%= definition.definition_entry() %></li>
 	<% end %>
+	</ol>
 	<a href="/word/<%= @word.id() %>/definition/new">Add Definition</a>
 </section>

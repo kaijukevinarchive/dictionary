@@ -71,5 +71,18 @@ section.word-list ul li{
 }
 
 section.definition h3 {
-	margin: 1em 0;
+	margin: 0 0 1em;
+}
+
+section.definition h4 {
+	font-weight: normal;
+	font-size: 0.8em;
+	font-style: italic;
+	color: #555;
+	margin: 0.5em 0;
+}
+
+section.definition a {
+	display: block;
+	text-align: right;
 }
