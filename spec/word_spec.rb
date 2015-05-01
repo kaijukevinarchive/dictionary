@@ -53,11 +53,20 @@ describe(Word) do
 			expect(my_word.definition_list()).to(eq([]))
 		end
 
-		it('returns all definitions') do
+		it('returns a definitions') do
 			my_word = Word.new(:word_entry => 'Toast')
 			my_word_definition = Definition.new(:definition_entry => "A grilled slice of bread")
 			my_word.add_definition(my_word_definition)
 			expect(my_word.definition_list()).to(eq([my_word_definition]))
+		end
+
+		it('returns all definitions') do
+			my_word = Word.new(:word_entry => 'Jam')
+			my_word_definition = Definition.new(:definition_entry => "A condiment often put on toast")
+			my_other_word_definition = Definition.new(:definition_entry => "A song that one likes very much")
+			my_word.add_definition(my_word_definition)
+			my_word.add_definition(my_other_word_definition)
+			expect(my_word.definition_list()).to(eq([my_word_definition, my_other_word_definition]))
 		end
 	end
 
@@ -80,4 +89,5 @@ describe(Word) do
 			expect(Word.find(2)).to(eq(my_other_word))
 		end
 	end
+
 end
