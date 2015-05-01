@@ -2,7 +2,7 @@
 
 A small web app that stores words and their definitions. 
 
-Heroku Link: 
+Heroku Link: https://glacial-wave-6015.herokuapp.com/
 
 GitHub Link: https://github.com/KaijuKevin/dictionary
 
