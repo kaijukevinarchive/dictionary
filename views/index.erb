@@ -6,7 +6,7 @@
 <section class="word-list">
 	<ul>
 		<% @words_list.each() do |word| %>
-		<li><%= word.word_entry() %></li>
+		<li><a href="/word/<%= word.id %>"><%= word.word_entry() %></a></li>
 		<% end %>	
 	</ul>
 </section>
