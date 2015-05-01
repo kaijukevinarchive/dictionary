@@ -9,7 +9,7 @@ describe("the dictionary path", {:type => :feature}) do
 	end
 	it("visits the index page") do
 		visit('/')
-		expect(page).to have_content("Welcome")
+		expect(page).to have_content("Your Words:")
 	end
 
 	it("visits the new word form") do
@@ -33,7 +33,7 @@ describe("the dictionary path", {:type => :feature}) do
 		fill_in('word', :with => test_word)
 		click_button('Add Word')
 		click_link(test_word)
-		expect(page).to have_content('Word Entry:')
+		expect(page).to have_content('Definitions:')
 		expect(page).to have_content(test_word)
 	end
 

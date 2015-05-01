@@ -1,0 +1,75 @@
+body {
+	background: #377BA6;
+	font-family: 'Open Sans', Helvetica, Arial, Sans-Serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+
+section.main {
+	background: #010626;
+	width: 80%;
+	margin: 2em auto;
+	border-radius: 10px;
+}
+
+section.main > header {
+	color: #ffffff;
+	text-align: center;
+}
+
+section.main > header h1{
+	padding: 0.5em 0;
+}
+
+section.main nav {
+	background: #F2F2F2;
+	padding: 0.5em;
+}
+
+section.main nav a {
+}
+
+section.main nav ul {
+	width: 100%;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+section.main nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	text-align: center;
+	padding: 0.2em;
+}
+
+section.main nav ul li:not(:last-child) {
+	margin-right: 1em;
+}
+
+section.content {
+	background: #F2F2F2;
+	border-radius: 0 0 10px 10px;
+	padding: 1em 2em;
+}
+
+section.word-list {
+	margin: 10px 0px;
+}
+
+section.word-list ul {
+	margin: 0;
+	padding: 0;
+}
+
+section.word-list ul li{
+	list-style-type: none;
+}
+
+section.definition h3 {
+	margin: 1em 0;
+}

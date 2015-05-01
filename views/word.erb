@@ -1,6 +1,8 @@
-<h3>Word Entry:</h3>
-<h3><%= @word.word_entry() %></h3>
-<% @word.definition_list().each() do |definition| %>
-	<p><%= definition.definition_entry() %></p>
-<% end %>
-<a href="/word/<%= @word.id() %>/definition/new">Add Definition</a>
+<section class="definition">
+	<h3><%= @word.word_entry() %></h3>
+	<p>Definitions:</p>
+	<% @word.definition_list().each() do |definition| %>
+		<p><%= definition.definition_entry() %></p>
+	<% end %>
+	<a href="/word/<%= @word.id() %>/definition/new">Add Definition</a>
+</section>
