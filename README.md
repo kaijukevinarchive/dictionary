@@ -29,6 +29,10 @@ $ ruby app.rb
 
 In your web browser, enter this url: http://localhost:4567
 
+### Known Issues
+
+The Dictionary can store multiples of the same word
+
 ### Authors
 
 Kevin Chen
