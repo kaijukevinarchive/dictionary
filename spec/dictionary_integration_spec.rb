@@ -47,4 +47,18 @@ describe("the dictionary path", {:type => :feature}) do
 		click_link('Add Definition')
 		expect(page).to have_content("New Definition")
 	end
+
+	it("adds a definition to a word") do
+		test_word = "Jam"
+		test_definition = "Kind of like jelly"
+		visit('/')
+		click_link('Add Word')
+		fill_in('word', :with => test_word)
+		click_button('Add Word')
+		click_link(test_word)
+		click_link('Add Definition')
+		fill_in('definition', :with => test_definition)
+		click_button('Add Definition')
+		expect(page).to have_content(test_definition)
+	end
 end

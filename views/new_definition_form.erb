@@ -1,7 +1,7 @@
-<form action='/' method='post'>
+<form action='/word/<%= @word.id() %>/definition' method='post'>
 	<div class="form-group">
 		<label for='definition'>New Definition</label>
-		<input id='definition' name='definition' type='textarea'>	
+		<input id='definition' name='definition' type='text'>	
 	</div>
 	<button type="submit">Add Definition</button>
 </form>
