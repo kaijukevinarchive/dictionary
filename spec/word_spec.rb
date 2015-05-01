@@ -40,8 +40,8 @@ describe(Word) do
 
 		it("returns and array of words") do
 			my_word = Word.new(:word_entry => 'Toast')
-			my_other_word = Word.new(:word_entry => 'Jam')
 			my_word.save()
+			my_other_word = Word.new(:word_entry => 'Jam')
 			my_other_word.save()
 			expect(Word.all()).to(eq([my_word, my_other_word]))
 		end
@@ -54,10 +54,30 @@ describe(Word) do
 		end
 
 		it('returns all definitions') do
-			my_word = Word.new(:word_entry => "Toast")
+			my_word = Word.new(:word_entry => 'Toast')
 			my_word_definition = Definition.new(:definition_entry => "A grilled slice of bread")
 			my_word.add_definition(my_word_definition)
 			expect(my_word.definition_list()).to(eq([my_word_definition]))
+		end
+	end
+
+	describe('#id') do
+		it('returns the correct id for each word') do 
+			my_word = Word.new(:word_entry => 'Toast')
+			my_word.save()
+			my_other_word = Word.new(:word_entry => 'Jam')
+			my_other_word.save()
+			expect(my_other_word.id()).to(eq(2))
+		end
+	end
+
+	describe('.find') do
+		it('returns the object with the same id') do
+			my_word = Word.new(:word_entry => 'Toast')
+			my_word.save()
+			my_other_word = Word.new(:word_entry => 'Jam')
+			my_other_word.save()
+			expect(Word.find(2)).to(eq(my_other_word))
 		end
 	end
 end
