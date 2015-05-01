@@ -53,20 +53,20 @@ describe(Word) do
 			expect(my_word.definition_list()).to(eq([]))
 		end
 
-		it('returns a definitions') do
+		it('stores a definition') do
 			my_word = Word.new({:word_entry => 'Toast'})
-			my_word_definition = Definition.new({:definition_entry => "A grilled slice of bread"})
+			my_word_definition = "A grilled slice of bread"
 			my_word.add_definition(my_word_definition)
-			expect(my_word.definition_list()).to(eq([my_word_definition]))
+			expect(my_word.definition_list().length()).to(eq(1))
 		end
 
 		it('returns all definitions') do
 			my_word = Word.new({:word_entry => 'Jam'})
-			my_word_definition = Definition.new({:definition_entry => "A condiment often put on toast"})
-			my_other_word_definition = Definition.new({:definition_entry => "A song that one likes very much"})
+			my_word_definition = "A condiment often put on toast"
+			my_other_word_definition = "A song that one likes very much"
 			my_word.add_definition(my_word_definition)
 			my_word.add_definition(my_other_word_definition)
-			expect(my_word.definition_list()).to(eq([my_word_definition, my_other_word_definition]))
+			expect(my_word.definition_list().length()).to(eq(2))
 		end
 	end
 

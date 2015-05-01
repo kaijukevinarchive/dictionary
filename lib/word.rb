@@ -21,7 +21,8 @@ class Word
 	end
 
 	define_method(:add_definition) do |definition|
-		@definition_list.push(definition)
+		new_definition = Definition.new(:definition_entry => definition)
+		@definition_list.push(new_definition)
 	end
 
 	define_singleton_method(:find) do |id_number|
