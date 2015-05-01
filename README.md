@@ -2,7 +2,7 @@
 
 A small web app that stores words and their definitions. 
 
-Heroku Link: https://fathomless-shelf-1177.herokuapp.com/
+Heroku Link: 
 
 GitHub Link: https://github.com/KaijuKevin/dictionary
 
@@ -26,6 +26,8 @@ To run the page, enter this command in your terminal
 ```console
 $ ruby app.rb
 ```
+
+In your web browser, enter this url: http://localhost:4567
 
 ### Authors
 
