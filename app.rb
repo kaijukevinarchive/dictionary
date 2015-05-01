@@ -7,3 +7,8 @@ also_reload('lib/**/*.rb')
 get('/') do
 	erb(:index)
 end
+
+get('/word/new') do
+	erb(:new_word_form)	
+end
+

@@ -8,4 +8,10 @@ describe("the dictionary path", {:type => :feature}) do
 		visit('/')
 		expect(page).to have_content("Welcome")
 	end
+
+	it("visits the new word form") do
+		visit('/')
+		click_link('Add Word')
+		expect(page).to have_content("New Word")
+	end
 end
