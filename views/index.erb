@@ -1,3 +1,12 @@
 <header>
 	<h2>Welcome</h2>
+	<h3>Words:</h3>
 </header>
+
+<section class="word-list">
+	<ul>
+		<% @words_list.each() do |word| %>
+		<li><%= word.word_entry() %></li>
+		<% end %>	
+	</ul>
+</section>

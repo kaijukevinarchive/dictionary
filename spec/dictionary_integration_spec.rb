@@ -14,4 +14,12 @@ describe("the dictionary path", {:type => :feature}) do
 		click_link('Add Word')
 		expect(page).to have_content("New Word")
 	end
+
+	it("adds a new word to the list") do
+		visit('/')
+		click_link('Add Word')
+		fill_in('word', :with => "Jam")
+		click_button('Add Word')
+		expect(page).to have_content("Jam")
+	end
 end
