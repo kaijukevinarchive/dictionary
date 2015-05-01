@@ -7,7 +7,7 @@ describe(Definition) do
 		it("returns the correct definition") do
 			my_entry = "This is a test definition entry"
 			my_definition = Definition.new(:definition_entry => my_entry)
-			expect(my_definition.entry()).to(eq(my_entry))
+			expect(my_definition.definition_entry()).to(eq(my_entry))
 		end
 	end
 end

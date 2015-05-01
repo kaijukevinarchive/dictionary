@@ -34,17 +34,30 @@ describe(Word) do
 	end
 
 	describe('.all') do
-		it("should return an empty array at first") do
+		it("returns an empty array at first") do
 			expect(Word.all()).to(eq([]))
 		end
 
-		it("should return and array of words") do
+		it("returns and array of words") do
 			my_word = Word.new(:word_entry => 'Toast')
-			my_other_word = Word.new(:word_entry => 'Toast')
+			my_other_word = Word.new(:word_entry => 'Jam')
 			my_word.save()
 			my_other_word.save()
 			expect(Word.all()).to(eq([my_word, my_other_word]))
 		end
 	end
 
+	describe('#add_definition') do
+		it('returns an empty array at first') do
+			my_word = Word.new(:word_entry => 'Toast')
+			expect(my_word.definition_list()).to(eq([]))
+		end
+
+		it('returns all definitions') do
+			my_word = Word.new(:word_entry => "Toast")
+			my_word_definition = Definition.new(:definition_entry => "A grilled slice of bread")
+			my_word.add_definition(my_word_definition)
+			expect(my_word.definition_list()).to(eq([my_word_definition]))
+		end
+	end
 end
