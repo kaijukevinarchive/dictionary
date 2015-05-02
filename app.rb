@@ -38,3 +38,9 @@ post('/word/:id/definition') do
 	@word.add_definition(new_definition)
 	erb(:word)
 end
+
+get('/clear') do
+	Word.clear()
+	@words_list = Word.all()
+	erb(:index)
+end
