@@ -74,4 +74,15 @@ describe("the dictionary path", {:type => :feature}) do
 		expect(page).to have_content(test_definition)
 	end
 
+	it("visits the clear path and clears Word data") do
+		test_word = "Jam"
+		test_definition = "Kind of like jelly"
+		visit('/')
+		click_link('Add Word')
+		fill_in('word', :with => test_word)
+		fill_in('definition', :with => test_definition)
+		click_button('Add Word')
+		visit('/clear')
+		expect(Word.all()).to eq([])
+	end
 end
